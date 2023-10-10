@@ -7,7 +7,7 @@ import New from './New';
 import Spinner from 'react-bootstrap/Spinner';
 function SectionNews(props){
     const {data, loading} = loadContent(props.name);
-    console.log(data);
+    //console.log(data);
     return(
         <>
             <section id={`${props.name}`} className="section-new">
