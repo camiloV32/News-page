@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import NavElem from './NavElem';
-import SectionsNews from './components/sectionNews';
+import SectionsNews from './SectionNews';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   const [searchQuery, setSearchQuery] = useState();

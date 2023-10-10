@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-import {loadContent} from '../requestApi';
+import {loadContent} from './requestApi';
 import New from './New';
 import Spinner from 'react-bootstrap/Spinner';
 function SectionNews(props){
