@@ -1,0 +1,19 @@
+.h-100:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.main-content{
+    margin-top: 80px;
+}
+.navbar-nav-scroll a{
+    transition: all 2s;
+}
+.card-header h5, .card-body p{
+    overflow: hidden;
+}
+.card-body p{
+    max-height: 280px;
+}
+.card-header{
+    max-height: 120px;
+}
