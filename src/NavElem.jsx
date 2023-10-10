@@ -15,6 +15,7 @@ function NavElem(props) {
     const handleClick = () =>{
         props.sendDataToParent(searchQuery);
     }
+    console.log(props)
   return (
     <Navbar expand="md" className="bg-body-tertiary fixed-top">
       <Container fluid>
@@ -26,7 +27,7 @@ function NavElem(props) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            {props.sections.map(nameSection=>{return <Nav.Link href={`#${nameSection.section}`}>{nameSection.section}</Nav.Link>})}
+            {props.sections.map(nameSection=>{return <Nav.Link href={`#${nameSection.section}`} key={props.index}>{nameSection.section}</Nav.Link>})}
           </Nav>
           <Form className="d-flex">
             <Form.Control

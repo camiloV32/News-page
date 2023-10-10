@@ -7,7 +7,7 @@ import New from './New';
 import Spinner from 'react-bootstrap/Spinner';
 function SectionNews(props){
     const {data, loading} = loadContent(props.name);
-    //console.log(data);
+
     return(
         <>
             <section id={`${props.name}`} className="section-new">
@@ -16,7 +16,7 @@ function SectionNews(props){
                     <Suspense fallback={<Spinner animation="border" />}>
                         <Container className='d-flex justify-content-center align-items-center my-5'>
                             <Row className='g-4'>
-                                {data?.articles.map(newElement=>{return <New dataNew={newElement}/>})}
+                                {data?.articles.map(newElement=>{return <New dataNew={newElement} key={data?.articles.indexOf(newElement)}/>})}
                             </Row>
                             
                         </Container>
@@ -29,3 +29,15 @@ function SectionNews(props){
     );
 }
 export default SectionNews;
+function generateKey(palabras) {
+    let hash = 0;
+    for (let i = 0; i < palabras.length; i++) {
+      const palabra = palabras[i];
+      for (let j = 0; j < palabra.length; j++) {
+        const char = palabra.charCodeAt(j);
+        hash = (hash << 5) - hash + char;
+      }
+    }
+    return hash;
+  }
+  
